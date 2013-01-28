@@ -1,5 +1,7 @@
-source 'https://rubygems.org'
-gem 'rails', '3.2.10'
+source :rubygems
+gem 'rails', '3.2.11'
+
+gem 'thin'
 
 gem 'inherited_resources'
 gem 'simple_form'
@@ -33,7 +35,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'thin'
 end
 
 # merda
