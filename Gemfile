@@ -41,7 +41,9 @@ end
 group :production do
   gem 'pg'
   gem 'thin'
-end# merda
+end
+
+# merda
 # porra
 # git reset --hard HEAD
 # subindo esta merda
