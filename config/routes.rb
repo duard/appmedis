@@ -17,6 +17,7 @@ AppMedica::Application.routes.draw do
   namespace :admin do
     root to: "application#index"
 
+    resources :users
     resources :marcas
   end
 
