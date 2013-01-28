@@ -22,8 +22,6 @@ GEM
       activesupport (= 3.2.10)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activerecord-postgresql-adapter (0.0.1)
-      pg
     activeresource (3.2.10)
       activemodel (= 3.2.10)
       activesupport (= 3.2.10)
@@ -192,7 +190,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-postgresql-adapter
   better_errors
   binding_of_caller
   cancan
