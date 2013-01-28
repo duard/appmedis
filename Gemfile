@@ -6,6 +6,7 @@ gem 'mysql2'
 ################################################################################
 # Gems para o sistema em geral
 ################################################################################
+gem 'thin'
 gem 'inherited_resources'
 gem 'simple_form'
 ################################################################################
@@ -28,7 +29,6 @@ end
 
 group :development do
   gem 'hash_extension'
-#  gem 'thin'
   gem 'quiet_assets'
   gem 'hpricot'
   gem 'ruby_parser'
