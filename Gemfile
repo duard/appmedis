@@ -36,8 +36,13 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+  gem 'mailcatcher'
 end
 
+group :production do
+  gem 'pg'
+  gem 'activerecord-postgresql-adapter'
+end
 # merda
 # porra
 # git reset --hard HEAD
