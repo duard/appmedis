@@ -1,0 +1,39 @@
+<%= link_to 'Inserir ' + resource_class.name,
+            new_resource_path(@resource),
+            :class => 'btn btn-primary' %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+			<% attributes.each do |attr| %>
+			<th><%= resource_class.human_attribute_name(attr) %></th>
+			<% end %>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% collection.each do |resource| %>
+      <tr>
+				<% attributes.each do |attr| %>
+				<td>
+		    	<%= resource.public_send(attr).to_s.truncate(20) %>
+				</td>
+				<% end %>
+        <td>
+          <%= link_to "Editar",
+                      edit_resource_path(resource), :class => 'btn btn-mini' %>
+          <%= link_to "Deletar",
+                      resource_path(resource),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Inserir ' + resource_class.name,
+            new_resource_path(@resource),
+            :class => 'btn btn-primary' %>
+

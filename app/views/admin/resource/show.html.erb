@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>Visualizando <%= resource_class %></h1>
+</div>
+
+<dl class="dl-horizontal">
+	<% attributes.each do |attr| %>
+		<dt><strong><%= resource_class.human_attribute_name(attr) %></strong></dt>
+	  <dd><%= resource.public_send(attr).to_s.truncate(20) %></dd>
+	<% end %>
+</dl>
+
+<div class="form-actions">
+	
+	<%= link_to 'Inserir ' + resource_class.name, new_resource_path(@resource),  :class => 'btn btn-primary' %>
+	<%= link_to 'Editar ' + resource_class.name, edit_resource_path(@resource),  :class => 'btn btn' %>
+	
+	<%= link_to 'Deletar ' + resource_class.name, resource_path(@resource),
+             :method => 'delete',
+             :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => ' Realmente deseja excluir este registro ?')) },
+             :class => 'btn btn-danger' %>
+
+
+</div>

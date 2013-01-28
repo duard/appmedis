@@ -1,0 +1,2 @@
+# Create a default user
+   50:     User.create!(:email => 'duardbr@gmail.com', :password => 'teste123[]', :password_confirmation => 'teste123[]')
