@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.10'
-gem 'mysql2'
 
 ################################################################################
 # Gems para o sistema em geral
 ################################################################################
-# gem 'thin'
 gem 'inherited_resources'
 gem 'simple_form'
 ################################################################################
@@ -28,6 +26,7 @@ group :assets do
 end
 
 group :development do
+  gem 'mysql2'
   gem 'hash_extension'
   gem 'quiet_assets'
   gem 'hpricot'
@@ -41,8 +40,8 @@ end
 
 group :production do
   gem 'pg'
-end
-# merda
+  gem 'thin'
+end# merda
 # porra
 # git reset --hard HEAD
 # subindo esta merda
