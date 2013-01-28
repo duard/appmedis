@@ -28,7 +28,7 @@ end
 
 group :development do
   gem 'hash_extension'
-  gem 'thin'
+#  gem 'thin'
   gem 'quiet_assets'
   gem 'hpricot'
   gem 'ruby_parser'
@@ -41,6 +41,7 @@ end
 
 group :production do
   gem 'pg'
+
 end
 # merda
 # porra
